@@ -1,92 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Web OTP Demo</title>
     <style>
-        *,
-        *::after,
-        *::before {
-            box-sizing: border-box;
-        }
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            background-color: rgb(235, 235, 235);
+      body {
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: rgb(235, 235, 235);
+      }
+
+      h1 {
+        margin: 0 0 5px 0;
+        font-weight: normal;
+      }
+
+      h2 {
+        margin: 0 0 16px 0;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        font-family: inherit;
+        font-size: 32px;
+        border-radius: 10px;
+      }
+
+      pre {
+        padding: 16px;
+        margin: 0 0 16px 0;
+        border-radius: 10px;
+        background-color: rgb(221, 221, 221);
+      }
+
+      .panel {
+        box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+          6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+          12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+          22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+          41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+          100px 100px 80px rgba(0, 0, 0, 0.07);
+        padding: 32px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .panel {
+          width: 80%;
         }
 
         h1 {
-            margin: 0 0 5px 0;
-            font-weight: normal;
-        }
-
-        h2 {
-            margin: 0 0 16px 0;
-            font-weight: normal;
-            font-size: 16px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
+          font-size: 20px;
         }
 
         input {
-            width: 100%;
-            padding: 8px;
-            font-family: inherit;
-            font-size: 32px;
-            border-radius: 10px;
+          font-size: 24px;
         }
-
-        pre {
-            padding: 16px;
-            margin: 0 0 16px 0;
-            border-radius: 10px;
-            background-color: rgb(221, 221, 221);
-        }
-
-        .panel {
-            box-shadow:
-                2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-                6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-                12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-                22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-                41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-                100px 100px 80px rgba(0, 0, 0, 0.07);
-            padding: 32px;
-            background-color: white;
-            border-radius: 10px;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="panel">
-        <h1>You must have received an <strong>OTP</strong></h1>
-        <h2>If not, send an SMS from another mobile in this format</h2>
-        <pre>
+      <h1>You must have received an <strong>OTP</strong></h1>
+      <h2>If not, send an SMS from another mobile in this format</h2>
+      <pre>
         <code>
 Your OTP is: 123456.
 
 @web-otp-demo.vercel.app #123456
         </code>
         </pre>
-        <form>
-            <label>Enter OTP</label>
-            <input autocomplete="one-time-code" required>
-        </form>
+      <form>
+        <label>Enter OTP</label>
+        <input autocomplete="one-time-code" required />
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
