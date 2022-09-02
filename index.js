@@ -13,6 +13,8 @@ if ("OTPCredential" in window) {
         ac.abort();
         alert("got the OTP and submitted the form!!");
       });
+    } else {
+        console.error('form not found');
     }
     navigator.credentials
       .get({
