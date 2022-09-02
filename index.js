@@ -10,6 +10,7 @@ if ("OTPCredential" in window) {
     const form = input.closest("form");
     if (form) {
       form.addEventListener("submit", (e) => {
+        e.preventDefault();
         ac.abort();
         alert("got the OTP and submitted the form!!");
       });
