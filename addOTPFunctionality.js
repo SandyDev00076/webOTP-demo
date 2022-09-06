@@ -30,8 +30,7 @@ export async function addOTPFunctionality(
     window.addEventListener("DOMContentLoaded", (e) => {
       if (!inputElement) return;
       try {
-        const otp = await navigator.credentials
-          .get({
+        const otp = await navigator.credentials.get({
             otp: { transport: ["sms"] },
             signal: ac.signal,
           });
