@@ -1,8 +1,5 @@
 console.log("We are going to experiment with WebOTP!!");
 
-// disable the button
-document.querySelector('button').disabled = true;
-
 // add an event listener to input
 document.querySelector('input').addEventListener('input', (e) => {
   if (e.target.value && e.target.value.length === 6) {
