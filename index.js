@@ -1,4 +1,4 @@
-import { addOTPFunctionality } from "./addOTPFunctionality";
+import { addOTPFunctionality } from "./addOTPFunctionality.js";
 
 console.log("We are going to experiment with WebOTP!!");
 
