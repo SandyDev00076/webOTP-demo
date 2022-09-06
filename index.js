@@ -1,5 +1,17 @@
 console.log("We are going to experiment with WebOTP!!");
 
+// disable the button
+document.querySelector('button').disabled = true;
+
+// add an event listener to input
+document.querySelector('input').addEventListener('input', (e) => {
+  if (e.target.value && e.target.value.length === 6) {
+    document.querySelector('button').disabled = false;
+  } else {
+    document.querySelector('button').disabled = true;
+  }
+})
+
 // if OTP is supported
 if ("OTPCredential" in window) {
   // when DOM has loaded
@@ -25,7 +37,6 @@ if ("OTPCredential" in window) {
       .then((otp) => {
         input.value = otp.code;
         console.log("OTP received - ", otp.code);
-        if (form) form.submit();
       })
       .catch((err) => {
         console.log(err);

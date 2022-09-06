@@ -51,6 +51,7 @@
         font-family: inherit;
         font-size: 32px;
         border-radius: 10px;
+        margin-bottom: 32px;
       }
 
       pre {
@@ -72,6 +73,23 @@
         border-radius: 10px;
       }
 
+      button {
+        background-color: #1565c0;
+        padding: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        width: 100%;
+        font-family: inherit;
+        font-size: 20px;
+      }
+
+      button:disabled {
+        background-color: grey;
+      }
+
       @media screen and (max-width: 700px) {
         .panel {
           width: 80%;
@@ -86,7 +104,11 @@
         }
 
         pre {
-            font-size: 10px;
+          font-size: 10px;
+        }
+
+        button {
+          font-size: 16px;
         }
       }
     </style>
@@ -106,6 +128,7 @@ Your OTP is: 123456.
       <form>
         <label>Enter OTP</label>
         <input autocomplete="one-time-code" required />
+        <button>Submit</button>
       </form>
     </div>
     <script src="./index.js"></script>
