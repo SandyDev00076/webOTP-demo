@@ -33,6 +33,7 @@ if ("OTPCredential" in window) {
       })
       .then((otp) => {
         input.value = otp.code;
+        document.querySelector('button').disabled = false;
         console.log("OTP received - ", otp.code);
       })
       .catch((err) => {
