@@ -19,6 +19,12 @@ const ac = addOTPFunctionality(
   },
   (err) => {
     console.error(err);
+    const tip = document.createElement("h3");
+    tip.style.marginTop = "16px";
+    tip.style.color = "#e57373";
+    tip.style.textAlign = "center";
+    tip.innerText = "OTP couldn't be read";
+    document.querySelector(".panel").appendChild(tip);
   },
   60,
   () => {
