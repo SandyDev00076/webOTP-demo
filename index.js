@@ -51,7 +51,7 @@ const ac = addOTPfunctionality(
   }
 );
 
-const form = inputElement.closest("form");
+const form = document.querySelector("form");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
