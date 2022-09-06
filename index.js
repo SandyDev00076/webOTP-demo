@@ -9,6 +9,8 @@ document.querySelector("input").addEventListener("input", (e) => {
   }
 });
 
+// ---------------------------
+
 /**
  * Modularized function for listening to OTP
  * @param {HTMLElement} inputElement Element which we need to fill after OTP is received
@@ -56,6 +58,8 @@ function addOTPfunctionality(
     return ac;
   } else return undefined;
 }
+
+// ---------------------------
 
 const ac = addOTPfunctionality(
   document.querySelector('input[autocomplete="one-time-code"]'),
